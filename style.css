@@ -1,0 +1,181 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #666;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  #main_header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #000;
+    text-align: center;
+  }
+  h1.logo_title {
+    padding-top: 10px;
+  }
+  h1.logo_title img {
+    width: 160px;
+  }
+  #gnb {
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+  #gnb > ul > li {
+    float: left;
+    width: 100px;
+    padding: 5px 0;
+    /* outline: 1px solid green; */
+    font-size: 12px;
+    text-align: center;
+  }
+  /*#gnb > ul > li.event {
+    background: #1860c9;
+    padding-right: 40px;
+    margin-left: 2em;
+    position: relative;
+  }*/
+  /* 가상요소로 박스를 좌측에 만듬 */
+  #gnb > ul > li.event:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 30px;
+    /* background: red; */
+    position: absolute;
+    left: -20px; top: 0;
+    background-image: url(images/event-triangle-bg.svg);
+  
+  }
+  
+  #gnb > ul > li.event > a > span {
+    margin-left: 1em;
+  }
+  #gnb > ul > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    /* margin-left: 0px; */
+    font-size: 14px;
+    display: block;
+    /* outline: 1px solid red; */
+  }
+  /* 2단계 메뉴 구현 */
+  #gnb .depth2 {
+    /* background: #ccc; */
+    margin-top: 35px;
+    padding: 10px;
+    display: none; /* 기본은 비표시 */
+  }
+  /* 복합 선택자: 상태선택자 > 자식(후손) 
+    1단계 메뉴가 hover시 후손 .depth2가 표시 
+  */
+  #gnb > ul > li:hover > .depth2{
+    display: block;
+  }
+  #gnb .depth2 > li {
+    padding: 5px;
+  }
+  #gnb .depth2 > li > a {
+    color: #fff;
+    /* text-shadow: 1px 1px 2px #000; */
+  }
+  /* 1단계 메뉴 hover시 밑줄 효과 */
+  #gnb > ul > li > a:hover {
+    text-decoration: underline;
+  }
+  #gnb > ul > li:last-child > a:hover {
+    text-decoration: none;
+  }
+  /* 2단계 메뉴 hover시 텍스트 하이라이트 효과 */
+  #gnb .depth2 > li > a:hover {
+    /* 글자색: 흰색, 불투명도 75%(0.75) */
+    color: rgba(255,255,255,0.75);
+  }
+  section {
+    width: 100%;
+    height: 650px;
+    text-align: center;
+  }
+  #하울, #토토로, #센 {
+    background-color: rgba(189, 223, 228, 0.904);
+    background-size: cover;
+    background-position: center;
+  }
+  #하울 {
+   /* background-image: url(./imges/하울의움직이는성.png); */
+    background-attachment: fixed;
+  }
+  #토토로 {
+   /*  background-image: url(./imges/토토로.png); */
+    background-attachment: fixed;
+  }
+  #센 {
+   /* background-image: url(./imges/센과\ 치히로의\ 행방불명.png); */
+  }
+  .section_nav {
+    margin-top: 1.5em;
+  }
+  .section_nav > ul > li {
+    display: inline-block;
+    color: #fff;
+  }
+  .section_nav > ul > li > a {
+    color: #fff;
+  }
+  .section_nav > ul > li > span {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+  }
+  .section_group {
+    /* outline: 2px solid red; */
+    padding-top: 100px;
+  }
+  /* footer
+    height: 50px, 
+    bgcolor: #363636 
+    text: #9b9b9b
+  */
+  #main_footer {
+    background: #363636;
+    color: #9b9b9b;
+    height: 50px;
+    padding: 0 50px;
+  }
+  #main_footer a {
+    color: #9b9b9b;
+  }
+  .copy {
+    font-size: 10px;
+  }
+  .footer_nav {
+    font-size: 12px;
+  }
+  .left {
+    float: left;
+    margin-top: 10px;
+  }
+  .footer_logo {
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+  .right {
+    float: right;
+    margin-top: 16px;
+  }
+  .footer_nav > li {
+    display: inline-block;
+    margin-left: 2em;
+  }
